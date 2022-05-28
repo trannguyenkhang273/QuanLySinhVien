@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Quản lý sinh viên - Trang chủ</title>
+        <link href="https://ap.poly.edu.vn/theme/student_v2/vendors/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css"/>
+        <link href="https://ap.poly.edu.vn/theme/student_v2/vendors/global/vendors.bundle.css" rel="stylesheet" type="text/css"/>
+        <link href="https://ap.poly.edu.vn/theme/student_v2/css/demo1/style.bundle.css" rel="stylesheet" type="text/css"/>
+        <link href="https://ap.poly.edu.vn/theme/student_v2/css/demo1/skins/header/base/light.css" rel="stylesheet" type="text/css"/>
+        <link href="https://ap.poly.edu.vn/theme/student_v2/css/demo1/skins/header/menu/light.css" rel="stylesheet" type="text/css"/>
+        <link href="https://ap.poly.edu.vn/theme/student_v2/css/demo1/skins/brand/light.css" rel="stylesheet" type="text/css"/>
+        <link href="https://ap.poly.edu.vn/theme/student_v2/css/demo1/skins/aside/light.css" rel="stylesheet" type="text/css"/>
+        <link href="https://ap.poly.edu.vn/theme/student_v2/vendors/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css">
+        <link href="https://ap.poly.edu.vn/css/web.css" rel="stylesheet">
+        <link rel="shortcut icon" href="https://ap.poly.edu.vn/images/favicon.ico"/>
+    </head>
+    <body class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--enabled kt-subheader--fixed kt-subheader--solid kt-aside--enabled kt-aside--fixed kt-page--loading">
+        <div id="app">
+        <div class="kt-grid kt-grid--hor kt-grid--root">
+            <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver kt-page">
+                <div class="kt-aside  kt-aside--fixed  kt-grid__item kt-grid kt-grid--desktop kt-grid--hor-desktop"
+                     id="kt_aside">
+                    <div class="kt-aside__brand kt-grid__item " id="kt_aside_brand">
+                        <div class="kt-aside__brand-logo">
+                            <a href="">
+                                <img alt="Logo" src="Image, Icon/google_photos_125px.png" width="50" style="padding-right: 10px;"/> <span style="font-size: 17px;">Lập trình City</span>
+                               
+                                <!-- <img alt="Logo" src="https://lh3.googleusercontent.com/proxy/vnaczBZ1LjlfShOfAr__EtFX1mihFqqi5BJDVGC7GYrFAQeNrvuMpd7DnW_JjL_Zt-Ymw_IgKaN9DikS0gyqOj6Ci-Zm7_8sWnpCzDpfimb4iVyqCvtg7tvyeAk9uG4" width="135"/> -->
+                            </a>
+                        </div>
+                        <div class="kt-aside__brand-tools">
+                            <button class="kt-aside__brand-aside-toggler" id="kt_aside_toggler">
+                        <span><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"
+                                   version="1.1" class="kt-svg-icon">
+            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <polygon points="0 0 24 0 24 24 0 24"/>
+                <path d="M5.29288961,6.70710318 C4.90236532,6.31657888 4.90236532,5.68341391 5.29288961,5.29288961 C5.68341391,4.90236532 6.31657888,4.90236532 6.70710318,5.29288961 L12.7071032,11.2928896 C13.0856821,11.6714686 13.0989277,12.281055 12.7371505,12.675721 L7.23715054,18.675721 C6.86395813,19.08284 6.23139076,19.1103429 5.82427177,18.7371505 C5.41715278,18.3639581 5.38964985,17.7313908 5.76284226,17.3242718 L10.6158586,12.0300721 L5.29288961,6.70710318 Z"
+                      fill="#000000" fill-rule="nonzero"
+                      transform="translate(8.999997, 11.999999) scale(-1, 1) translate(-8.999997, -11.999999) "/>
+                <path d="M10.7071009,15.7071068 C10.3165766,16.0976311 9.68341162,16.0976311 9.29288733,15.7071068 C8.90236304,15.3165825 8.90236304,14.6834175 9.29288733,14.2928932 L15.2928873,8.29289322 C15.6714663,7.91431428 16.2810527,7.90106866 16.6757187,8.26284586 L22.6757187,13.7628459 C23.0828377,14.1360383 23.1103407,14.7686056 22.7371482,15.1757246 C22.3639558,15.5828436 21.7313885,15.6103465 21.3242695,15.2371541 L16.0300699,10.3841378 L10.7071009,15.7071068 Z"
+                      fill="#000000" fill-rule="nonzero" opacity="0.3"
+                      transform="translate(15.999997, 11.999999) scale(-1, 1) rotate(-270.000000) translate(-15.999997, -11.999999) "/>
+            </g>
+        </svg></span>
+                                <span><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"
+                                           version="1.1" class="kt-svg-icon">
+            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <polygon points="0 0 24 0 24 24 0 24"/>
+                <path d="M12.2928955,6.70710318 C11.9023712,6.31657888 11.9023712,5.68341391 12.2928955,5.29288961 C12.6834198,4.90236532 13.3165848,4.90236532 13.7071091,5.29288961 L19.7071091,11.2928896 C20.085688,11.6714686 20.0989336,12.281055 19.7371564,12.675721 L14.2371564,18.675721 C13.863964,19.08284 13.2313966,19.1103429 12.8242777,18.7371505 C12.4171587,18.3639581 12.3896557,17.7313908 12.7628481,17.3242718 L17.6158645,12.0300721 L12.2928955,6.70710318 Z"
+                      fill="#000000" fill-rule="nonzero"/>
+                <path d="M3.70710678,15.7071068 C3.31658249,16.0976311 2.68341751,16.0976311 2.29289322,15.7071068 C1.90236893,15.3165825 1.90236893,14.6834175 2.29289322,14.2928932 L8.29289322,8.29289322 C8.67147216,7.91431428 9.28105859,7.90106866 9.67572463,8.26284586 L15.6757246,13.7628459 C16.0828436,14.1360383 16.1103465,14.7686056 15.7371541,15.1757246 C15.3639617,15.5828436 14.7313944,15.6103465 14.3242754,15.2371541 L9.03007575,10.3841378 L3.70710678,15.7071068 Z"
+                      fill="#000000" fill-rule="nonzero" opacity="0.3"
+                      transform="translate(9.000003, 11.999999) rotate(-270.000000) translate(-9.000003, -11.999999) "/>
+            </g>
+        </svg></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="kt-aside-menu-wrapper kt-grid__item kt-grid__item--fluid" id="kt_aside_menu_wrapper">
+            <div
+                id="kt_aside_menu"
+                class="kt-aside-menu "
+                data-ktmenu-vertical="1"
+                data-ktmenu-scroll="1" data-ktmenu-dropdown-timeout="500"
+                >
+                <ul class="kt-menu__nav ">
+                    <li class="kt-menu__item " aria-haspopup="true">
+                        <a href="" class="kt-menu__link ">
+                            <span class="kt-menu__link-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
+                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <path d="M17,12 L18.5,12 C19.3284271,12 20,12.6715729 20,13.5 C20,14.3284271 19.3284271,15 18.5,15 L5.5,15 C4.67157288,15 4,14.3284271 4,13.5 C4,12.6715729 4.67157288,12 5.5,12 L7,12 L7.5582739,6.97553494 C7.80974924,4.71225688 9.72279394,3 12,3 C14.2772061,3 16.1902508,4.71225688 16.4417261,6.97553494 L17,12 Z" fill="#000000"/>
+                                        <rect fill="#000000" opacity="0.3" x="10" y="16" width="4" height="4" rx="2"/>
+                                    </g>
+                                </svg>
+                            </span>
+                            <span class="kt-menu__link-text">Thông báo và tin tức</span>
+                        </a>
+                    </li>
+                    <li class="kt-menu__item " aria-haspopup="true">
+                        <a href="" class="kt-menu__link ">
+                            <span class="kt-menu__link-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
+                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <polygon points="0 0 24 0 24 24 0 24"/>
+                                        <path d="M6.26193932,17.6476484 C5.90425297,18.0684559 5.27315905,18.1196257 4.85235158,17.7619393 C4.43154411,17.404253 4.38037434,16.773159 4.73806068,16.3523516 L13.2380607,6.35235158 C13.6013618,5.92493855 14.2451015,5.87991302 14.6643638,6.25259068 L19.1643638,10.2525907 C19.5771466,10.6195087 19.6143273,11.2515811 19.2474093,11.6643638 C18.8804913,12.0771466 18.2484189,12.1143273 17.8356362,11.7474093 L14.0997854,8.42665306 L6.26193932,17.6476484 Z" fill="#000000" fill-rule="nonzero" transform="translate(11.999995, 12.000002) rotate(-180.000000) translate(-11.999995, -12.000002) "/>
+                                    </g>
+                                </svg>
+                            </span>
+                            <span class="kt-menu__link-text">Điểm danh</span>
+                        </a>
+                    </li>
+                    <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
+                        <a href="javascript:;" class="kt-menu__link kt-menu__toggle">
+                            <span class="kt-menu__link-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
+                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <rect x="0" y="0" width="24" height="24"/>
+                                        <path d="M10.5,5 L19.5,5 C20.3284271,5 21,5.67157288 21,6.5 C21,7.32842712 20.3284271,8 19.5,8 L10.5,8 C9.67157288,8 9,7.32842712 9,6.5 C9,5.67157288 9.67157288,5 10.5,5 Z M10.5,10 L19.5,10 C20.3284271,10 21,10.6715729 21,11.5 C21,12.3284271 20.3284271,13 19.5,13 L10.5,13 C9.67157288,13 9,12.3284271 9,11.5 C9,10.6715729 9.67157288,10 10.5,10 Z M10.5,15 L19.5,15 C20.3284271,15 21,15.6715729 21,16.5 C21,17.3284271 20.3284271,18 19.5,18 L10.5,18 C9.67157288,18 9,17.3284271 9,16.5 C9,15.6715729 9.67157288,15 10.5,15 Z" fill="#000000"/>
+                                        <path d="M5.5,8 C4.67157288,8 4,7.32842712 4,6.5 C4,5.67157288 4.67157288,5 5.5,5 C6.32842712,5 7,5.67157288 7,6.5 C7,7.32842712 6.32842712,8 5.5,8 Z M5.5,13 C4.67157288,13 4,12.3284271 4,11.5 C4,10.6715729 4.67157288,10 5.5,10 C6.32842712,10 7,10.6715729 7,11.5 C7,12.3284271 6.32842712,13 5.5,13 Z M5.5,18 C4.67157288,18 4,17.3284271 4,16.5 C4,15.6715729 4.67157288,15 5.5,15 C6.32842712,15 7,15.6715729 7,16.5 C7,17.3284271 6.32842712,18 5.5,18 Z" fill="#000000" opacity="0.3"/>
+                                    </g>
+                                </svg>
+                            </span>
+                            <span class="kt-menu__link-text">Lịch học</span>
+                            <i class="kt-menu__ver-arrow la la-angle-right"></i>
+                        </a>
+                        <div class="kt-menu__submenu ">
+                            <span class="kt-menu__arrow"></span>
+                        </div>
+                    </li>
+                    <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
+                        <a href="Diem.html" class="kt-menu__link kt-menu__toggle">
+                            <span class="kt-menu__link-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
+                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <rect x="0" y="0" width="24" height="24"/>
+                                        <path d="M13.6855025,18.7082217 C15.9113859,17.8189707 18.682885,17.2495635 22,17 C22,16.9325178 22,13.1012863 22,5.50630526 L21.9999762,5.50630526 C21.9999762,5.23017604 21.7761292,5.00632908 21.5,5.00632908 C21.4957817,5.00632908 21.4915635,5.00638247 21.4873465,5.00648922 C18.658231,5.07811173 15.8291155,5.74261533 13,7 C13,7.04449645 13,10.79246 13,18.2438906 L12.9999854,18.2438906 C12.9999854,18.520041 13.2238496,18.7439052 13.5,18.7439052 C13.5635398,18.7439052 13.6264972,18.7317946 13.6855025,18.7082217 Z" fill="#000000"/>
+                                        <path d="M10.3144829,18.7082217 C8.08859955,17.8189707 5.31710038,17.2495635 1.99998542,17 C1.99998542,16.9325178 1.99998542,13.1012863 1.99998542,5.50630526 L2.00000925,5.50630526 C2.00000925,5.23017604 2.22385621,5.00632908 2.49998542,5.00632908 C2.50420375,5.00632908 2.5084219,5.00638247 2.51263888,5.00648922 C5.34175439,5.07811173 8.17086991,5.74261533 10.9999854,7 C10.9999854,7.04449645 10.9999854,10.79246 10.9999854,18.2438906 L11,18.2438906 C11,18.520041 10.7761358,18.7439052 10.4999854,18.7439052 C10.4364457,18.7439052 10.3734882,18.7317946 10.3144829,18.7082217 Z" fill="#000000" opacity="0.3"/>
+                                    </g>
+                                </svg>
+                            </span>
+                            <span class="kt-menu__link-text">Điểm</span>
+                            <i class="kt-menu__ver-arrow la la-angle-right"></i>
+                        </a>
+                        <div class="kt-menu__submenu ">
+                            <span class="kt-menu__arrow"></span>
+                        </div>
+                    </li>
+                    <li class="kt-menu__item " aria-haspopup="true">
+                        <a href="" class="kt-menu__link ">
+                            <span class="kt-menu__link-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
+                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <polygon points="0 0 24 0 24 24 0 24"/>
+                                        <path d="M16.5,4.5 C14.8905,4.5 13.00825,6.32463215 12,7.5 C10.99175,6.32463215 9.1095,4.5 7.5,4.5 C4.651,4.5 3,6.72217984 3,9.55040872 C3,12.6834696 6,16 12,19.5 C18,16 21,12.75 21,9.75 C21,6.92177112 19.349,4.5 16.5,4.5 Z" fill="#000000" fill-rule="nonzero"/>
+                                    </g>
+                                </svg>
+                            </span>
+                            <span class="kt-menu__link-text">Khen thưởng/Kỷ luật</span>
+                        </a>
+                    </li>
+                    
+                    <li class="kt-menu__item " aria-haspopup="true">
+                        <a href="" class="kt-menu__link ">
+                            <span class="kt-menu__link-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
+                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <rect x="0" y="0" width="24" height="24"/>
+                                        <circle fill="#000000" opacity="0.3" cx="20.5" cy="12.5" r="1.5"/>
+                                        <rect fill="#000000" opacity="0.3" transform="translate(12.000000, 6.500000) rotate(-15.000000) translate(-12.000000, -6.500000) " x="3" y="3" width="18" height="7" rx="1"/>
+                                        <path d="M22,9.33681558 C21.5453723,9.12084552 21.0367986,9 20.5,9 C18.5670034,9 17,10.5670034 17,12.5 C17,14.4329966 18.5670034,16 20.5,16 C21.0367986,16 21.5453723,15.8791545 22,15.6631844 L22,18 C22,19.1045695 21.1045695,20 20,20 L4,20 C2.8954305,20 2,19.1045695 2,18 L2,6 C2,4.8954305 2.8954305,4 4,4 L20,4 C21.1045695,4 22,4.8954305 22,6 L22,9.33681558 Z" fill="#000000"/>
+                                    </g>
+                                </svg>
+                            </span>
+                            <span class="kt-menu__link-text">Học phí</span>
+                        </a>
+                    </li>
+                    
+                                
+                    <li class="kt-menu__item  kt-menu__item--submenu " aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
+                        <a href="javascript:;" class="kt-menu__link kt-menu__toggle">
+                            <span class="kt-menu__link-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
+                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <rect x="0" y="0" width="24" height="24"/>
+                                        <circle fill="#000000" opacity="0.3" cx="12" cy="12" r="9"/>
+                                        <path d="M11.7357634,20.9961946 C6.88740052,20.8563914 3,16.8821712 3,12 C3,11.9168367 3.00112797,11.8339369 3.00336944,11.751315 C3.66233009,11.8143341 4.85636818,11.9573854 4.91262842,12.4204038 C4.9904938,13.0609191 4.91262842,13.8615942 5.45804656,14.101772 C6.00346469,14.3419498 6.15931561,13.1409372 6.6267482,13.4612567 C7.09418079,13.7815761 8.34086797,14.0899175 8.34086797,14.6562185 C8.34086797,15.222396 8.10715168,16.1034596 8.34086797,16.2636193 C8.57458427,16.423779 9.5089688,17.54465 9.50920913,17.7048097 C9.50956962,17.8649694 9.83857487,18.6793513 9.74040201,18.9906563 C9.65905192,19.2487394 9.24857641,20.0501554 8.85059781,20.4145589 C9.75315358,20.7620621 10.7235846,20.9657742 11.7357634,20.9960544 L11.7357634,20.9961946 Z M8.28272988,3.80112099 C9.4158415,3.28656421 10.6744554,3 12,3 C15.5114513,3 18.5532143,5.01097452 20.0364482,7.94408274 C20.069657,8.72412177 20.0638332,9.39135321 20.2361262,9.6327358 C21.1131932,10.8600506 18.0995147,11.7043158 18.5573343,13.5605384 C18.7589671,14.3794892 16.5527814,14.1196773 16.0139722,14.886394 C15.4748026,15.6527403 14.1574598,15.137809 13.8520064,14.9904917 C13.546553,14.8431744 12.3766497,15.3341497 12.4789081,14.4995164 C12.5805657,13.664636 13.2922889,13.6156126 14.0555619,13.2719546 C14.8184743,12.928667 15.9189236,11.7871741 15.3781918,11.6380045 C12.8323064,10.9362407 11.963771,8.47852395 11.963771,8.47852395 C11.8110443,8.44901109 11.8493762,6.74109366 11.1883616,6.69207022 C10.5267462,6.64279981 10.170464,6.88841096 9.20435656,6.69207022 C8.23764828,6.49572949 8.44144409,5.85743687 8.2887174,4.48255778 C8.25453994,4.17415686 8.25619136,3.95717082 8.28272988,3.80112099 Z M20.9991771,11.8770357 C20.9997251,11.9179585 21,11.9589471 21,12 C21,16.9406923 17.0188468,20.9515364 12.0895088,20.9995641 C16.970233,20.9503326 20.9337111,16.888438 20.9991771,11.8770357 Z" fill="#000000" opacity="0.3"/>
+                                    </g>
+                                </svg>
+                            </span>
+                            <span class="kt-menu__link-text">Dịch vụ trực tuyến (New)</span>
+                            <i class="kt-menu__ver-arrow la la-angle-right"></i>
+                        </a>
+                        <div class="kt-menu__submenu ">
+                            <span class="kt-menu__arrow"></span>
+                            <ul class="kt-menu__subnav">
+                                
+                                <li class="kt-menu__item " aria-haspopup="true">
+                                    <a href="" class="kt-menu__link ">
+                                    <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
+                                    <span class="kt-menu__link-text">Đăng ký dịch vụ</span>
+                                    </a>
+                                </li>
+                                <li class="kt-menu__item " aria-haspopup="true">
+                                    <a href="" class="kt-menu__link ">
+                                    <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
+                                    <span class="kt-menu__link-text">Dịch vụ đã đăng ký</span>
+                                    </a>
+                                </li>
+        
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="kt-menu__item " aria-haspopup="true">
+                        <a href="" class="kt-menu__link ">
+                            <span class="kt-menu__link-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
+                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <rect x="0" y="0" width="24" height="24"/>
+                                        <path d="M11.914857,14.1427403 L14.1188827,11.9387145 C14.7276032,11.329994 14.8785122,10.4000511 14.4935235,9.63007378 L14.3686433,9.38031323 C13.9836546,8.61033591 14.1345636,7.680393 14.7432841,7.07167248 L17.4760882,4.33886839 C17.6713503,4.14360624 17.9879328,4.14360624 18.183195,4.33886839 C18.2211956,4.37686904 18.2528214,4.42074752 18.2768552,4.46881498 L19.3808309,6.67676638 C20.2253855,8.3658756 19.8943345,10.4059034 18.5589765,11.7412615 L12.560151,17.740087 C11.1066115,19.1936265 8.95659008,19.7011777 7.00646221,19.0511351 L4.5919826,18.2463085 C4.33001094,18.1589846 4.18843095,17.8758246 4.27575484,17.613853 C4.30030124,17.5402138 4.34165566,17.4733009 4.39654309,17.4184135 L7.04781491,14.7671417 C7.65653544,14.1584211 8.58647835,14.0075122 9.35645567,14.3925008 L9.60621621,14.5173811 C10.3761935,14.9023698 11.3061364,14.7514608 11.914857,14.1427403 Z" fill="#000000"/>
+                                    </g>
+                                </svg>
+                            </span>
+                            <span class="kt-menu__link-text">SMS</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+                </div>
+        
+                <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper" id="kt_wrapper">
+                    <div id="kt_header" class="kt-header kt-grid__item  kt-header--fixed ">
+            <div class="kt-header-menu-wrapper" id="kt_header_menu_wrapper"></div>
+            <div class="kt-header__topbar">
+                <a href="" class="kt-header__topbar-item kt-header__topbar-item--langs" title="Đổi màu">
+                    <div class="kt-header__topbar-wrapper">
+                        <span class="kt-header__topbar-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
+                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <rect x="0" y="0" width="24" height="24"/>
+                                    <path d="" fill="#000000" fill-rule="nonzero"/>
+                                </g>
+                            </svg>
+                        </span>
+                    </div>
+                </a>
+                <div class="kt-header__topbar-item kt-header__topbar-item--user">
+                    <div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="0px,0px">
+
+                    </div>
+        
+                    <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround dropdown-menu-xl">
+                        <div class="kt-user-card kt-user-card--skin-dark kt-notification-item-padding-x"
+                             style="background-image: url(https://ap.poly.edu.vn/theme/student_v2/media/misc/bg-1.jpg)">
+                            <div class="kt-user-card__avatar">
+                            </div>
+                            <div class="kt-user-card__name">
+                                Trần  Tôn
+                            </div>
+                        </div>
+                        <div class="kt-notification">
+                            <a href="" class="kt-notification__item">
+                                <div class="kt-notification__item-icon">
+                                    <i class="flaticon2-calendar-3 kt-font-success"></i>
+                                </div>
+                                <div class="kt-notification__item-details">
+                                    <div class="kt-notification__item-title kt-font-bold">
+                                        Hồ sơ cá nhân
+                                    </div>
+                                    <div class="kt-notification__item-time">
+                                        Thông tin cá nhân
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="kt-notification__custom kt-space-between">
+                                <a href="" class="btn btn-label btn-label-brand btn-sm btn-bold">Đăng xuất</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+                    <div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
+                        <div class="kt-subheader  kt-grid__item" id="kt_subheader">
+                            <div class="kt-container  kt-container--fluid ">
+                                <div class="kt-subheader__main">
+        
+                                    <h3 class="kt-subheader__title">Quản lý sinh viên</h3>
+        
+                                    <span class="kt-subheader__separator kt-subheader__separator--v"></span>
+        
+                                    <div class="kt-subheader__breadcrumbs">
+                                        <a href="" class="kt-subheader__breadcrumbs-home"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
+                                <div class="kt-portlet">
+                <div class="kt-portlet__head kt-portlet__head--lg">
+                    <div class= "kt-portlet__head-label">
+                        <img src="Image, Icon/6188530.jpg" alt="" width="1190" height="785">
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </body>
+        </html>
+</html>
